@@ -138,6 +138,11 @@ fn main() {
 
         if guessed_human_or_lackthereof == human_or_lackthereof {
             print!("🟩")
+        } else if guessed_human_or_lackthereof.contains(human_or_lackthereof)
+            || human_or_lackthereof.contains(guessed_human_or_lackthereof)
+        {
+            correct = false;
+            print!("🟨");
         } else {
             correct = false;
             print!("🟥")
@@ -153,7 +158,9 @@ fn main() {
         println!();
 
         if correct {
-            break;
+            return;
         }
     }
+    println!("you are dumb and stupid and wrong and bad and you should feel bad");
+    println!("real answer: {}", full_answer);
 }

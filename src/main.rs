@@ -1,7 +1,7 @@
 #![feature(variant_count)]
 
-use terminal_emoji::Emoji;
 use pronouns::Pronouns;
+use terminal_emoji::Emoji;
 
 use inquire::{
     validator::{ErrorMessage, Validation},

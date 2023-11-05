@@ -8,4 +8,4 @@ it/any yuri from a catboy with a toki pona hyperfixation
 it/[NAME] yuri from a catboy with a toki pona hyperfixation  
 🟩🟩🟩🟩🟩  
   
-idea by [@larsfrommars@toot.garden](https://fedi.joeydrew.studio/notice/AbIVb4xOyznudnLHua)
+idea by [@larsfrommars@toot.garden](https://toot.garden/@larsfrommars/111324283599526222)

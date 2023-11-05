@@ -1,5 +1,6 @@
 #![feature(variant_count)]
 
+use terminal_emoji::Emoji;
 use pronouns::Pronouns;
 
 use inquire::{
@@ -108,51 +109,54 @@ fn main() {
         ); */
 
         let mut correct = true;
+        let green = Emoji::new("🟩", "G");
+        let yellow = Emoji::new("🟨", "Y");
+        let red = Emoji::new("🟥", "R");
 
         if guessed_pronouns.first == pronouns.first {
-            print!("🟩")
+            print!("{}", green)
         } else if guessed_pronouns.first == pronouns.second {
             correct = false;
-            print!("🟨")
+            print!("{}", yellow)
         } else {
             correct = false;
-            print!("🟥")
+            print!("{}", red)
         }
 
         if guessed_pronouns.second == pronouns.second {
-            print!("🟩")
+            print!("{}", green)
         } else if guessed_pronouns.second == pronouns.first {
             correct = false;
-            print!("🟨")
+            print!("{}", yellow)
         } else {
             correct = false;
-            print!("🟥")
+            print!("{}", red)
         }
 
         if guessed_thingy == thingy {
-            print!("🟩")
+            print!("{}", green)
         } else {
             correct = false;
-            print!("🟥")
+            print!("{}", red)
         }
 
         if guessed_human_or_lackthereof == human_or_lackthereof {
-            print!("🟩")
+            print!("{}", green)
         } else if guessed_human_or_lackthereof.contains(human_or_lackthereof)
             || human_or_lackthereof.contains(guessed_human_or_lackthereof)
         {
             correct = false;
-            print!("🟨");
+            print!("{}", yellow);
         } else {
             correct = false;
-            print!("🟥")
+            print!("{}", red)
         }
 
         if guessed_hyperfixation == hyperfixation {
-            print!("🟩")
+            print!("{}", green)
         } else {
             correct = false;
-            print!("🟥")
+            print!("{}", red)
         }
 
         println!();
